@@ -73,3 +73,9 @@ To do this we need to put in the terminal: <code>amplify add auth</code>
 Adding auth means we are making changes to our Amplify but not to the cloud server, for our cloud server to know our changes we need to do <code>amplify push</code> too send any changes to our cloud server. 
 
 If you go to AWS management console and into AWS Amplify service we can now see our Application already initiated, click on the App and enable lauch AMplify studio, here we can make changes to Authentication, storage, functions our rest API and Data. 
+
+### useAuthentication
+
+import useAuthentication to our App.js or App.ts and export it  as useAuthentication(App) this way it scopes and places a login component automatically which users now can sign up, login etc automatically. 
+
+![image](https://user-images.githubusercontent.com/77361838/180838693-8e0d56d7-004a-4f49-b71b-94cc469fbb22.png)
