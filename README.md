@@ -83,3 +83,5 @@ If you go to AWS management console and into AWS Amplify service we can now see 
 import useAuthentication to our App.js or App.ts and export it  as useAuthentication(App) this way it scopes and places a login component automatically which users now can sign up, login etc automatically. 
 
 ![image](https://user-images.githubusercontent.com/77361838/180838693-8e0d56d7-004a-4f49-b71b-94cc469fbb22.png)
+
+## Adding API (REST API)
