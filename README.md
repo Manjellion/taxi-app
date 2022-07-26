@@ -2,13 +2,17 @@
 
 ## Introduction
 A mobile application in general purpose of Taxi industry applied using cloud computing tools from AWS.
+<br>
   Tools include:
-    - AWS Amplify (React-Native)
-    - AWS Locations Service (Map Tool)
-    - AWS API Gateway (API tool)
-    - AWS Lambda (Rest API - NodeJS)
-    - AWS DynamoDB (NoSQL Database)
-
+<br>
+  <ul>
+    <li>AWS Amplify (React-Native)</li>
+    <li>AWS Locations Service (Map Tool)</li>
+    <li>AWS API Gateway (API tool)</li>
+    <li>AWS Lambda (Rest API - NodeJS)</li>
+    <li>AWS DynamoDB (NoSQL Database)</li>
+  </ul>
+  
 ## Creating 
 ### Prerequisites
 Before installing and developing we need the follwoing installed:
