@@ -78,9 +78,9 @@ Adding auth means we are making changes to our Amplify but not to the cloud serv
 
 If you go to AWS management console and into AWS Amplify service we can now see our Application already initiated, click on the App and enable lauch AMplify studio, here we can make changes to Authentication, storage, functions our rest API and Data. 
 
-### useAuthentication
+### withAuthenticator
 
-import useAuthentication to our App.js or App.ts and export it  as useAuthentication(App) this way it scopes and places a login component automatically which users now can sign up, login etc automatically, once the user has successfully logged in it renders the App component after. 
+import withAuthenticator to our App.js or App.ts and export it  as withAuthenticator(App) this way it scopes and places a login component automatically which users now can sign up, login etc automatically, once the user has successfully logged in it renders the App component after. 
 
 <code>import { withAuthenticator } from 'aws-amplify-react-native';</code>
 
