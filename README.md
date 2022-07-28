@@ -11,6 +11,7 @@ A mobile application in general purpose of Taxi industry applied using cloud com
     <li>AWS API Gateway (API tool)</li>
     <li>AWS Lambda (Rest API - NodeJS)</li>
     <li>AWS DynamoDB (NoSQL Database)</li>
+    <li>AWS S3 Bucket (Storage)</li>
   </ul>
   
 ## Creating 
