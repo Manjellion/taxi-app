@@ -58,7 +58,7 @@ choose a blank template with the language you are familiar with, for me its Java
 
 <code>npm install aws-amplify aws-amplify-react-native amazon-cognito-identity-js @react-native-community/netinfo @react-native-async-storage/async-storage @react-native-picker/picker</code>
 
-then do amplify init to initialise a backend (e.t.c S3 Bucket):
+then do amplify init to initialise a backend (e.t.c S3 Bucket) and produce a template on <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html">CloudFormation</a>:
 
 <code>amplify init</code>
 
@@ -91,4 +91,10 @@ On a successfully sign in it will fully render the App.js component onto the scr
 
 ![image](https://user-images.githubusercontent.com/77361838/180985951-307ac219-d54d-4ff6-9839-a55017179074.png)
 
-## Adding API (REST API)
+## Adding API (GraphQL)
+
+To get started with the Backend inside our terminal in the file directory of our react native application we need to enter the following:
+
+<code>amplify add api</code>
+
+From there you will be given the option to either choose REST or GraphQL, I went ahead to picked GraphQL
