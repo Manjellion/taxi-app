@@ -93,6 +93,10 @@ On a successfully sign in it will fully render the App.js component onto the scr
 
 ![image](https://user-images.githubusercontent.com/77361838/180985951-307ac219-d54d-4ff6-9839-a55017179074.png)
 
+## Adding Cloud Storage (S3 Bucket)
+
+To get started, we can go ahead and do this two ways, we can use the Amplify Studio manager to configure our storage and create a S3 Bucket storage automatically linking it to the AWS S3 Service or we can put in our CLI <code>Amplify add storage</code>
+
 ## Adding API (GraphQL)
 
 To get started with the Backend inside our terminal in the file directory of our react native application we need to enter the following:
