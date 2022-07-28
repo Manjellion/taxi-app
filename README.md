@@ -12,6 +12,7 @@ A mobile application in general purpose of Taxi industry applied using cloud com
     <li>AWS Lambda (Rest API - NodeJS)</li>
     <li>AWS DynamoDB (NoSQL Database)</li>
     <li>AWS S3 Bucket (Storage)</li>
+    <li>AWS CloudFormation (Cloud Infastructure and Version Control)</li>
   </ul>
   
 ## Creating 
@@ -93,6 +94,10 @@ import withAuthenticator to our App.js or App.ts and export it  as withAuthentic
 On a successfully sign in it will fully render the App.js component onto the screen allowing you to proceed to the main application
 
 ![image](https://user-images.githubusercontent.com/77361838/180985951-307ac219-d54d-4ff6-9839-a55017179074.png)
+
+## Adding an interactive Map (Amazon Location Services)
+
+
 
 ## Adding Cloud Storage (S3 Bucket)
 
