@@ -7,7 +7,7 @@ A mobile application in general purpose of Taxi industry with cloud based soluti
 <br>
   <ul>
     <li>AWS Amplify (React-Native, POD for IOS)</li>
-    <li>AWS Locations Service (Map Tool)</li>
+    <li>Google Maps, Autocomplete, Map Tracker (Map Tool)</li>
     <li>AWS API Gateway (API tool)</li>
     <li>AWS Lambda (Rest API - NodeJS)</li>
     <li>AWS DynamoDB (NoSQL Database)</li>
@@ -110,3 +110,16 @@ To get started with the Backend inside our terminal in the file directory of our
 <code>amplify add api</code>
 
 From there you will be given the option to either choose REST or GraphQL, I went ahead to picked GraphQL
+
+## Creating Home Screen
+
+Base formation of the homescreen is having a Map generated and automated by Google cloud console with a automtic warning message/ pop up to ware users on important messages. Following up is a touchable button which is displayed looking like a search, even so it is a button to open up the next page. Following that are two bookmark options, one is the last place the user visited and the other bookmark is for Home, Work etc. There will also be a side navigation bar which can be opened with the hamburger menu on the top left.
+
+<img width="291" alt="Screenshot 2022-08-09 at 17 20 09" src="https://user-images.githubusercontent.com/77361838/183705048-74c0866c-a90c-4fb9-85a2-b66196da43f6.png">
+
+## Search Screen
+
+You will need to enable the features in google cloud console first and enable the API and also get your own API made in the credentials. For the search screen we will be using the Google places autocomplete search bar to automatically find data on the users search. To get started we need to install the packages into our react native files using NPM or Yarn: 
+
+<code>npm i react-native-google-places-autocomplete</code>
+
