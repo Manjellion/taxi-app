@@ -1,7 +1,7 @@
 # Taxi App
 
 ## Introduction
-A mobile application in general purpose of Taxi industry applied using cloud computing tools from AWS.
+A mobile application in general purpose of Taxi industry with cloud based solutions used(AWS).
 <br>
   Tools include:
 <br>
