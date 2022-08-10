@@ -6,17 +6,24 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar, Text } from 'react-native';
+import Geolocation from '@react-native-community/geolocation';
 
-import HomeScreen from './src/screens/HomeScreen';
-import HomeSearch from './src/screens/SearchScreen'
+import Router from './src/Navigation/root'
+
+navigator.geolocation = require('@react-native-community/geolocation');
 
 const App: () => Node = () => {
+
+  useEffect(() => {
+    Geolocation.requestAuthorization();
+  }, [])
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <HomeSearch />
+      <Router />
     </>
   );
 };
