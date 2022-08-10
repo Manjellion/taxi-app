@@ -123,3 +123,14 @@ You will need to enable the features in google cloud console first and enable th
 
 <code>npm i react-native-google-places-autocomplete</code>
 
+### GeoLocation Request
+
+We will need to request the user for premission to allow them to find their current locations and let them use it in the search screen.
+
+## Choosing a Ride/ Search results Screen 
+
+We again use the Map API from google clouds as our indicator to show the users origin to destination, we place two markers which will also place a route automatically to the fastest point using googles maps auto route. We will use the search screen to delivery results into the Results screen to show the users origin and destination.
+
+<img width="251" alt="Screenshot 2022-08-10 at 15 48 29" src="https://user-images.githubusercontent.com/77361838/183933317-81216bd3-1d23-481c-b966-c0c90f8bc869.png">
+
+
