@@ -20,15 +20,20 @@ const index = () => {
     const [ originPlace, setOriginPlace ] = useState(null);
     const [ destinationPlace, setDestinationPlace ] = useState(null);
 
-    const navgition = useNavigation();
+    const navigation = useNavigation();
 
-    useEffect(() => {
+    const checkNavigation = () => {
+        console.log('checkNavigation is called');
         if (originPlace && destinationPlace) {
-            navgition.navigate('SearchResult', {
+            navigation.navigate('SearchResult', {
                 originPlace,
                 destinationPlace
-            });
+            })
         }
+    }
+
+    useEffect(() => {
+        checkNavigation();
     }, [originPlace, destinationPlace])
 
   return (

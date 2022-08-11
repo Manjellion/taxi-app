@@ -3,16 +3,16 @@ import React from 'react'
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions';
 
-const index = () => {
+const index = ({ origin, destination }) => {
 
-    const origin = {
-        latitude: 51.1306,
-        longitude: 0.8536,
+    const originLoc = {
+        latitude: origin.details.geometry.location.lat,
+        longitude: origin.details.geometry.location.lng
     }
 
-    const destination = {
-        latitude: 51.1405,
-        longitude: 0.8378,
+    const destinationLoc = {
+        latitude: destination.details.geometry.location.lat,
+        longitude: destination.details.geometry.location.lng
     }
 
     const api_key = 'AIzaSyCZ0tmsb2tHm9basM-gjHeMgGFiQRZKev0';
@@ -30,17 +30,17 @@ const index = () => {
       }}
     >
         <MapViewDirections 
-            origin={origin}
-            destination={destination}
+            origin={originLoc}
+            destination={destinationLoc}
             apikey={api_key}
             strokeWidth={3}
         />
         <Marker 
-            coordinate={origin}
+            coordinate={originLoc}
             title={'Origin'}
         />
         <Marker 
-            coordinate={destination}
+            coordinate={destinationLoc}
             title={'Destination'}
         />
     </MapView>

@@ -1,21 +1,33 @@
 import * as React from 'react';
+import { View, Text } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import CustomDrawer from './CustomDrawer'
 
-import HomeScreen from '../screens/HomeScreen'
-import SearchScreen from '../screens/SearchScreen'
-import SearchResults from '../screens/SearchResults'
+import HomeRoot from './Home';
 
-const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
+
+const DummyScreen = (props) => (
+  <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+      <Text>{props.name}</Text>
+  </View>
+)
 
 const root = () => {
   return (
     <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Search" component={SearchScreen} />
-            <Stack.Screen name="SearchResult" component={SearchResults} />
-        </Stack.Navigator>
+      <Drawer.Navigator
+        drawerContent={ (props) => (
+        <CustomDrawer {...props} />)
+      }
+      >
+        <Drawer.Screen name="Home" component={HomeRoot} />
+        <Drawer.Screen name="Your Trips" component={ () => <DummyScreen name='Your Trips' />} />
+        <Drawer.Screen name="Help" component={ () => <DummyScreen name='Help' />} />
+        <Drawer.Screen name="Wallet" component={ () => <DummyScreen name='Wallet' />} />
+        <Drawer.Screen name="Settings" component={ () => <DummyScreen name='Settings' />} />
+      </Drawer.Navigator>
     </NavigationContainer>
   )
 }

@@ -1,4 +1,4 @@
-import { View, Text, Dimensions } from 'react-native'
+import { View, Text, Dimensions, ScrollView } from 'react-native'
 import React from 'react'
 import RouteMap from '../../components/RouteMap'
 import TaxiTypes from '../../components/TaxiTypes'
@@ -11,18 +11,22 @@ const index = (props) => {
 
   console.log(route);
 
-  return (
-    <View style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {/* Map showing destination */}
-        <View style={{ height: Dimensions.get('window').height - 400 }}>
-          <RouteMap />
-        </View>
+  const {originPlace, destinationPlace} = route.params;
 
-        {/* Select a type of taxi to use */}
-        <View style={{ height: 400 }}>
-          <TaxiTypes />
-        </View>
-    </View>
+  return (
+    <ScrollView>
+      <View style={{ display: 'flex', justifyContent: 'space-between' }}>
+          {/* Map showing destination */}
+          <View style={{ height: Dimensions.get('window').height - 400 }}>
+            <RouteMap origin={originPlace} destination={destinationPlace} />
+          </View>
+
+          {/* Select a type of taxi to use */}
+          <View style={{ height: 400 }}>
+            <TaxiTypes />
+          </View>
+      </View>
+    </ScrollView>
   )
 }
 

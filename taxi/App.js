@@ -7,7 +7,7 @@
  */
 
 import React, { useEffect } from 'react';
-import { StatusBar, Text } from 'react-native';
+import { StatusBar } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 
 import Router from './src/Navigation/root'
