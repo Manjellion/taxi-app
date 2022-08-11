@@ -133,4 +133,11 @@ We again use the Map API from google clouds as our indicator to show the users o
 
 <img width="251" alt="Screenshot 2022-08-10 at 15 48 29" src="https://user-images.githubusercontent.com/77361838/183933317-81216bd3-1d23-481c-b966-c0c90f8bc869.png">
 
+## Hamburger/ Navigation Bar
+
+Using the library React Navigation we are able to switch between screens, we also used this library to also create a side navigation for external menus such as settings and also profile. In the outcome we was able to create a side anvigation bar as shown below, for the profile the user registered details will go there and the picture they wan as the PP (Profile picuture). For this authentication we will be using AWS Amplify to configure it.
+
+![Screenshot 2022-08-11 at 15 01 04](https://user-images.githubusercontent.com/77361838/184152378-c2a02325-056b-4cd4-b3d3-89e250d1ef2f.png)
+
+
 
