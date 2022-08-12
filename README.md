@@ -6,7 +6,7 @@ A mobile application in general purpose of Taxi industry with cloud based soluti
   Tools include:
 <br>
   <ul>
-    <li>AWS Amplify (React-Native, POD for IOS)</li>
+    <li>AWS Amplify (React-Native, cocoapods for IOS)</li>
     <li>Google Maps, Autocomplete, Map Tracker (Map Tool)</li>
     <li>AWS Cognito (User Authentication)</li>
     <li>AWS AppSync (GraphQL)</li>
