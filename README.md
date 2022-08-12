@@ -10,7 +10,7 @@ A mobile application in general purpose of Taxi industry with cloud based soluti
     <li>Google Maps, Autocomplete, Map Tracker (Map Tool)</li>
     <li>AWS Cognito (User Authentication)</li>
     <li>AWS API Gateway (API tool)</li>
-    <li>AWS Lambda (Rest API - NodeJS)</li>
+    <li>AWS Lambda (Function)</li>
     <li>AWS DynamoDB (NoSQL Database)</li>
     <li>AWS S3 Bucket (Storage)</li>
     <li>AWS CloudFormation (Cloud Infastructure and Version Control)</li>
@@ -137,5 +137,9 @@ Using the library React Navigation we are able to switch between screens, we als
 
 ![Screenshot 2022-08-11 at 15 01 04](https://user-images.githubusercontent.com/77361838/184152378-c2a02325-056b-4cd4-b3d3-89e250d1ef2f.png)
 
+## Post-confirmation Lambda Trigger 
 
+As shown when setting up the Authentication in Amplify, we are really using the service Cognito so when a user Signs up we can manage user pools there. When a user signs up we want to automatically call a Lambda function to nest the information of the user into its event, inside Lambda also we will call DynamoDB and passing in all of the users metadata (data providing information of a single data) and storing it inside a database. We will also create a AWS AppSync GraphQL Api to allow other users to query there data but also allowing an admin to update it and also delete them.
+
+<img width="1004" alt="Screenshot 2022-08-12 at 10 59 42" src="https://user-images.githubusercontent.com/77361838/184332770-41f240a0-9104-427b-84c1-91566620fbb4.png">
 
