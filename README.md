@@ -139,7 +139,8 @@ Using the library React Navigation we are able to switch between screens, we als
 
 ## Post-confirmation Lambda Trigger 
 
-As shown when setting up the Authentication in Amplify, we are really using the service Cognito so when a user Signs up we can manage user pools there. When a user signs up we want to automatically call a Lambda function to nest the information of the user into its event, inside Lambda also we will call DynamoDB and passing in all of the users metadata (data providing information of a single data) and storing it inside a database. We will also create a AWS AppSync GraphQL Api to allow other users to query there data but also allowing an admin to update it and also delete them.
+As shown when setting up the Authentication in Amplify, we are really using the service Cognito so when a user Signs up we can manage user pools there. When a user signs up we want to automatically call a Lambda function to nest the information of the user into its event, inside Lambda also we will call DynamoDB and passing in all of the users metadata (data providing information of a single data) and storing it inside a database. We will also create a AWS AppSync GraphQL Api to allow other users to query there data but also allowing an admin to update it and also delete them. We will need to allow premissions in lambda by creating a new policy to the IAM user we created for this Amplify service. 
 
 <img width="1004" alt="Screenshot 2022-08-12 at 10 59 42" src="https://user-images.githubusercontent.com/77361838/184332770-41f240a0-9104-427b-84c1-91566620fbb4.png">
 
+If you sign up successfully, inside Cognito you will be able to access and see the user signed up, to group it between admin and just end users we can create custom user groups for that. To check if our Lambda has been successfully and that it also has the permissions to transfer the meta data from the AWS Cognito to DynamoDB then we have successfully completed this feature. 
