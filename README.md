@@ -76,6 +76,7 @@ Now that amplify is fully configured and initialised, we can go ahead and add au
 
 To do this we need to put in the terminal: <code>amplify add auth</code>
 
+The authentication in Amplify is handled by a service called cognito which handles user management services such as user pools.
 Adding auth means we are making changes to our Amplify but not to the cloud server, for our cloud server to know our changes we need to do <code>amplify push</code> too send any changes to our cloud server. 
 
 If you go to AWS management console and into AWS Amplify service we can now see our Application already initiated, click on the App and enable lauch AMplify studio, here we can make changes to Authentication, storage, functions our rest API and Data. 
