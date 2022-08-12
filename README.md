@@ -8,8 +8,9 @@ A mobile application in general purpose of Taxi industry with cloud based soluti
   <ul>
     <li>AWS Amplify (React-Native, POD for IOS)</li>
     <li>Google Maps, Autocomplete, Map Tracker (Map Tool)</li>
-    <li>AWS API Gateway (API tool)</li>
-    <li>AWS Lambda (Rest API - NodeJS)</li>
+    <li>AWS Cognito (User Authentication)</li>
+    <li>AWS AppSync (GraphQL)</li>
+    <li>AWS Lambda (Function)</li>
     <li>AWS DynamoDB (NoSQL Database)</li>
     <li>AWS S3 Bucket (Storage)</li>
     <li>AWS CloudFormation (Cloud Infastructure and Version Control)</li>
@@ -70,12 +71,13 @@ Finally, open App.js(Expo) and add the follwoing lines of code at top to complet
 <code>import awsconfig from './src/aws-exports'</code><br>
 <code>Amplify.configure(awsconfig)</code><br>
 
-## Adding Authentication 
+## Adding Authentication/ AWS Cognito
 
 Now that amplify is fully configured and initialised, we can go ahead and add authentication to create a login function;
 
 To do this we need to put in the terminal: <code>amplify add auth</code>
 
+The authentication in Amplify is handled by a service called cognito which handles user management services such as user pools.
 Adding auth means we are making changes to our Amplify but not to the cloud server, for our cloud server to know our changes we need to do <code>amplify push</code> too send any changes to our cloud server. 
 
 If you go to AWS management console and into AWS Amplify service we can now see our Application already initiated, click on the App and enable lauch AMplify studio, here we can make changes to Authentication, storage, functions our rest API and Data. 
@@ -94,10 +96,6 @@ import withAuthenticator to our App.js or App.ts and export it  as withAuthentic
 On a successfully sign in it will fully render the App.js component onto the screen allowing you to proceed to the main application
 
 ![image](https://user-images.githubusercontent.com/77361838/180985951-307ac219-d54d-4ff6-9839-a55017179074.png)
-
-## Adding an interactive Map (Amazon Location Services)
-
-
 
 ## Adding Cloud Storage (S3 Bucket)
 
@@ -139,5 +137,9 @@ Using the library React Navigation we are able to switch between screens, we als
 
 ![Screenshot 2022-08-11 at 15 01 04](https://user-images.githubusercontent.com/77361838/184152378-c2a02325-056b-4cd4-b3d3-89e250d1ef2f.png)
 
+## Post-confirmation Lambda Trigger 
 
+As shown when setting up the Authentication in Amplify, we are really using the service Cognito so when a user Signs up we can manage user pools there. When a user signs up we want to automatically call a Lambda function to nest the information of the user into its event, inside Lambda also we will call DynamoDB and passing in all of the users metadata (data providing information of a single data) and storing it inside a database. We will also create a AWS AppSync GraphQL Api to allow other users to query there data but also allowing an admin to update it and also delete them.
+
+<img width="1004" alt="Screenshot 2022-08-12 at 10 59 42" src="https://user-images.githubusercontent.com/77361838/184332770-41f240a0-9104-427b-84c1-91566620fbb4.png">
 
