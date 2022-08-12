@@ -1,7 +1,16 @@
-import { View, Text, Pressable } from 'react-native'
+import { View, Text, Pressable, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer'
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import { Auth } from 'aws-amplify';
+
+async function signOut() {
+  try {
+    await Auth.signOut();
+  } catch (error) {
+    console.log('Error signing out: ', error);
+  }
+}
 
 const CustomDrawer = (props) => {
   return (
@@ -52,6 +61,15 @@ const CustomDrawer = (props) => {
             </Pressable>
         </View>
         <DrawerItemList {...props} />
+        <View style={{ 
+            margin: 10,
+            backgroundColor: '#212121',
+            marginVertical: 250
+         }}>
+            <TouchableOpacity onPress={() => { signOut() }} style={{ padding: 20 }}>
+                <Text style={{ color: '#fff' }}>Sign Out</Text>
+            </TouchableOpacity>
+        </View>
     </DrawerContentScrollView>
   )
 }
