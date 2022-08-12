@@ -1,0 +1,15 @@
+projects:
+  taximainapp:
+    schemaPath: Users/manjil/Documents/aws/taxi-app/taxi/graphql/schema.json
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+extensions:
+  amplify:
+    version: 3

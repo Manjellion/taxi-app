@@ -1,0 +1,17 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "taximainapp6ef131866ef13186",
+  "functionName": "taximainapp6ef131866ef13186PostConfirmation",
+  "resourceName": "taximainapp6ef131866ef13186PostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/snapshot/repo/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "taximainapp6ef131866ef13186PostConfirmation",
+  "skipEdit": true,
+  "enableCors": false
+}
