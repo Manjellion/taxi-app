@@ -8,6 +8,7 @@ A mobile application in general purpose of Taxi industry with cloud based soluti
   <ul>
     <li>AWS Amplify (React-Native, POD for IOS)</li>
     <li>Google Maps, Autocomplete, Map Tracker (Map Tool)</li>
+    <li>AWS Cognito (User Authentication)</li>
     <li>AWS API Gateway (API tool)</li>
     <li>AWS Lambda (Rest API - NodeJS)</li>
     <li>AWS DynamoDB (NoSQL Database)</li>
@@ -70,7 +71,7 @@ Finally, open App.js(Expo) and add the follwoing lines of code at top to complet
 <code>import awsconfig from './src/aws-exports'</code><br>
 <code>Amplify.configure(awsconfig)</code><br>
 
-## Adding Authentication 
+## Adding Authentication/ AWS Cognito
 
 Now that amplify is fully configured and initialised, we can go ahead and add authentication to create a login function;
 
@@ -95,10 +96,6 @@ import withAuthenticator to our App.js or App.ts and export it  as withAuthentic
 On a successfully sign in it will fully render the App.js component onto the screen allowing you to proceed to the main application
 
 ![image](https://user-images.githubusercontent.com/77361838/180985951-307ac219-d54d-4ff6-9839-a55017179074.png)
-
-## Adding an interactive Map (Amazon Location Services)
-
-
 
 ## Adding Cloud Storage (S3 Bucket)
 
