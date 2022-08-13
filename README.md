@@ -1,7 +1,7 @@
 # Taxi App
 
 ## Introduction
-A mobile application in general purpose of Taxi industry with cloud based solutions used(AWS).
+A mobile application developed using React-native with cloud based solutions using AWS Mobile Application and Global Services and Google Clouds Map API.
 <br>
   Tools include:
 <br>
