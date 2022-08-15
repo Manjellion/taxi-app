@@ -143,4 +143,19 @@ As shown when setting up the Authentication in Amplify, we are really using the 
 
 <img width="1004" alt="Screenshot 2022-08-12 at 10 59 42" src="https://user-images.githubusercontent.com/77361838/184332770-41f240a0-9104-427b-84c1-91566620fbb4.png">
 
-If you sign up successfully, inside Cognito you will be able to access and see the user signed up, to group it between admin and just end users we can create custom user groups for that. To check if our Lambda has been successfully and that it also has the permissions to transfer the meta data from the AWS Cognito to DynamoDB then we have successfully completed this feature. 
+If you sign up successfully, at the AWS management console inside Cognito you will be able to access and see the user signed up, to group it between admin and just end users we can create custom user groups for that. To check if our Lambda has been successfully and that it also has the permissions to transfer the meta data from the AWS Cognito to DynamoDB then we have successfully completed this feature. 
+
+### Adding Lambda Function
+
+Using the CLI we input <code>add auth</code> and manually changing the set up so we can have a lambda function implemented with the action of post confirmation to our login page, this is to allow the lambda function to be triggered when the user completes logging in and automatically sends the meta data to our lambda function an stored as a <strong>event</strong>
+
+### Add AppSync
+
+Using CLI again input <code>add api</code> then we selected graphQL as our API and have it manually set so we are connected to DynamoDB services and launch a database for our login metadata to be transferred in. We will connect this in our Lambda Function where in our amplify folder inside function we can find custom.js file and edit our code there. To transfer data we will use DynamoDB to store the event inside a single Item and have it stored inside the database. For example: 
+
+![Screenshot 2022-08-15 at 12 25 38](https://user-images.githubusercontent.com/77361838/184627070-12fcc43f-1343-4e81-afa2-9bee00e974fb.png)
+
+Notice at the top of the code there is a file requirement known as aws-sdk, we require this so we have access to AWS software development kit allowing us access to using DynamoDB.
+
+
+
