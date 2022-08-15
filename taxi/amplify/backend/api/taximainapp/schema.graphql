@@ -2,4 +2,28 @@ type User @model {
   id: ID!
   username: String!
   email: String!
+
+  orders: [Order] @connection(keyName: "byUser", fields: ["id"])
+}
+
+type Taxi @model {
+  id: ID!
+  type: String!
+  latitude: Float,
+  longitude: Float!,
+  heading:  Float,
+
+  orders: [Order] @connection(keyName: "byTaxi", fields: ["id", "createdAt"])
+}
+
+type Order @model 
+@key(name: "byUser", fields: ["userId"])
+@key(name: "byTaxi", fields: ["taxiId"]) {
+  id: ID!,
+
+  userId: String!,
+  user: User @connection(fields: ["userId"]),
+
+taxiId: String
+taxi: Taxi @connection(fields: ["taxiId"])
 }

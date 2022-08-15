@@ -19,7 +19,7 @@
       "function": {
         "taximainapp6ef131866ef13186PostConfirmation": {
           "deploymentBucketName": "amplify-taximainapp-dev-92621-deployment",
-          "s3Key": "amplify-builds/taximainapp6ef131866ef13186PostConfirmation-474836694e72582b3245-build.zip"
+          "s3Key": "amplify-builds/taximainapp6ef131866ef13186PostConfirmation-4544622b467057514144-build.zip"
         }
       }
     }
