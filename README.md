@@ -157,5 +157,9 @@ Using CLI again input <code>add api</code> then we selected graphQL as our API a
 
 Notice at the top of the code there is a file requirement known as aws-sdk, we require this so we have access to AWS software development kit allowing us access to using DynamoDB.
 
+### Taxi and Order Models (GraphQL)
 
+So far for the mobile application we have been using dummy data that was stored inside our asset files to register placements of the taxi's on our interactive google maps inside an array so we created a model inside our graphQL schema which will hold the information about our taxi's on our API therefore on the cloud. 
+
+For the order model we needed to take in metadata from what our users will be choosing.
 
