@@ -145,6 +145,8 @@ As shown when setting up the Authentication in Amplify, we are really using the 
 
 If you sign up successfully, at the AWS management console inside Cognito you will be able to access and see the user signed up, to group it between admin and just end users we can create custom user groups for that. To check if our Lambda has been successfully and that it also has the permissions to transfer the meta data from the AWS Cognito to DynamoDB then we have successfully completed this feature. 
 
+ref. <a href="https://www.youtube.com/watch?v=Sk9HMuAaTmQ&t=367s&ab_channel=NaderDabit">Nader Dabit</a>
+
 ### Adding Lambda Function
 
 Using the CLI we input <code>add auth</code> and manually changing the set up so we can have a lambda function implemented with the action of post confirmation to our login page, this is to allow the lambda function to be triggered when the user completes logging in and automatically sends the meta data to our lambda function an stored as a <strong>event</strong>
